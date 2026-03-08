@@ -38,11 +38,20 @@ No cloud storage, no intermediaries, and no waiting. Simply create a session, sc
 
 Experience the seamless connection process and lightning-fast transfer across platforms:
 
-<p align="center">
-  <img src="WebApp_Demp.gif" alt="ConnectX Web Demo" width="600" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>Web View</b></td>
+      <td align="center"><b>Mobile View</b></td>
+    </tr>
+    <tr>
+      <td><img src="Demo (GIF)/WebApp_Demo.gif" alt="ConnectX Web Demo" width="600" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" /></td>
+      <td><img src="Demo (GIF)/MobileApp_Demo.gif" alt="ConnectX Mobile Demo" width="280" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" /></td>
+    </tr>
+  </table>
   <br/>
-  <em>Sharing files instantly and wirelessly via WebRTC data channel.</em>
-</p>
+  <p><i>Sharing files instantly and wirelessly via WebRTC data channel from both perspectives.</i></p>
+</div>
 
 ---
 

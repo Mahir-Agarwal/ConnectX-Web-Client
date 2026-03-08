@@ -45,7 +45,7 @@ Experience the seamless connection process and lightning-fast transfer across pl
       <td align="center"><b>Mobile View</b></td>
     </tr>
     <tr>
-      <td><img src="WebApp_Demo.gif" alt="ConnectX Web Demo" width="600" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" /></td>
+      <td><img src="WebApp_Demp.gif" alt="ConnectX Web Demo" width="600" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" /></td>
       <td><img src="Mobile_Demo.gif" alt="ConnectX Mobile Demo" width="280" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" /></td>
     </tr>
   </table>

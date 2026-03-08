@@ -1,14 +1,26 @@
+<!-- markdownlint-disable MD033 MD041 -->
 <div align="center">
-  <img src="public/vite.svg" alt="ConnectX Logo" width="100"/>
-  <h1>⚡ ConnectX</h1>
-  <p><strong>Real-Time Cross-Platform File Sharing System</strong></p>
   
+  <h1>⚡ ConnectX Web Client</h1>
+  
+  <p>
+    <strong>A modern, real-time cross-platform web application powering peer-to-peer WebRTC file transfers.</strong>
+  </p>
+
+  <p>
+    <a href="#-overview">Overview</a> •
+    <a href="#-demo">Demo</a> •
+    <a href="#-features">Features</a> •
+    <a href="#-tech-stack">Tech Stack</a> •
+    <a href="#-getting-started">Getting Started</a>
+  </p>
+
   <p>
     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
     <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
-    <img src="https://img.shields.io/badge/WebRTC-333333?style=for-the-badge&logo=webrtc&logoColor=white" alt="WebRTC" />
-    <img src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot" alt="Spring Boot" />
-    <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License" />
+    <img src="https://img.shields.io/badge/WebRTC-Enabled-333333?style=for-the-badge&logo=webrtc" alt="WebRTC"/>
+    <img src="https://img.shields.io/badge/WebSocket-Realtime-000000?style=for-the-badge&logo=socket.io" alt="WebSocket"/>
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License"/>
   </p>
 </div>
 
@@ -16,108 +28,142 @@
 
 ## 📖 Overview
 
-**ConnectX** is a lightning-fast, secure, and modern web application that enables instantaneous file sharing between Web and Android devices. By leveraging the power of **WebRTC**, ConnectX establishes a direct peer-to-peer (P2P) connection, meaning your files are transferred securely without ever touching a cloud server. The connection is orchestrated through a highly efficient **Spring Boot signaling server**.
+**ConnectX** is a beautifully crafted web application designed to instantly send and receive files across platforms using **WebRTC-based peer-to-peer (P2P) file transfer**. 
+
+No cloud storage, no intermediaries, and no waiting. Simply create a session, scan the **QR code from your Android device**, and establish a secure, direct connection for blistering-fast data transfer. Built using React and Vite, ConnectX acts as the fast and intuitive frontend to our high-performance Spring Boot signaling backend.
+
+---
 
 ## 🎥 Demo
 
-<div align="center">
-  <img src="Demo (GIF)/WebApp_Demo.gif" alt="ConnectX Demo" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-  <p><i>Effortlessly drag, drop, and share files instantly.</i></p>
-</div>
+Experience the seamless connection process and lightning-fast transfer across platforms:
+
+<p align="center">
+  <img src="Demo/WebApp_Demp.gif" alt="ConnectX Web Demo" width="600" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <br/>
+  <em>Sharing files instantly and wirelessly via WebRTC data channel.</em>
+</p>
+
+---
 
 ## ✨ Features
 
-- 🚀 **Real-Time Sharing**: Zero wait times. Files are transferred locally and instantly.
-- 📱 **Cross-Platform**: Seamlessly send files between Web browsers and Android devices.
-- 🔗 **Peer-to-Peer (P2P)**: Direct data transfer powered by WebRTC.
-- 🔒 **Secure & Private**: No cloud storage required. Your data never leaves your network.
-- ⚡ **Blazing Fast**: Utilizing data channels to max out your local network speeds.
-- 🎨 **Modern UI**: Clean, intuitive, and visually appealing interface built with React.
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🔒 Direct & Secure</h3>
+      <ul>
+        <li><strong>Peer-to-Peer Transfer</strong>: End-to-end encrypted transfer using WebRTC Data Channels.</li>
+        <li><strong>Zero Cloud Storage</strong>: Files move directly between Web and Mobile, ensuring total privacy.</li>
+        <li><strong>QR Code Connection</strong>: Secure authorization by scanning on the mobile app.</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h3>⚡ Lightning Fast</h3>
+      <ul>
+        <li><strong>Local Network Speed</strong>: Bypasses the internet entirely if both devices share the same WiFi.</li>
+        <li><strong>Real-Time Signaling</strong>: Instantly negotiated sessions using WebSocket and STUN/TURN relays.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🎨 Modern Web UI</h3>
+      <ul>
+        <li><strong>React & Framer Motion</strong>: Fluid animations and responsive, state-driven interface.</li>
+        <li><strong>Premium Design</strong>: Beautiful aesthetic that feels modern and intuitive.</li>
+        <li><strong>Cross-Platform</strong>: Runs flawlessly in any modern web browser.</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h3>🏗️ Robust Architecture</h3>
+      <ul>
+        <li><strong>Efficient Chunking</strong>: Handles large files without crashing the browser memory.</li>
+        <li><strong>Error Resiliency</strong>: Keep-alive pings and automatic reconnections for stable transfers.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-## 🏗️ Architecture
+---
 
-ConnectX relies on a modern real-time architecture:
+## 🛠️ Tech Stack
 
-1. **Signaling Server (Spring Boot / Java / WebSocket)**: Acts as the middleman for devices to discover each other, exchange session tokens, and negotiate connection parameters (SDP offers/answers and ICE candidates).
-2. **Peer-to-Peer Transfer (WebRTC)**: Once the handshake is complete, the signaling server steps out of the way. Files are chunked and streamed directly between devices via WebRTC Data Channels.
+| Component | Technology | Description |
+| :--- | :--- | :--- |
+| **Frontend Framework** | React 18 | Declarative component-based UI. |
+| **Build Tool** | Vite | Next-generation fast bundler. |
+| **P2P Engine** | WebRTC | Google's WebRTC library for raw P2P data channels. |
+| **Styling** | Tailwind CSS | Utility-first styling for rapid UI development. |
+| **Networking** | WebSockets | Persistent duplex connection to the Signaling Server. |
+| **Animations** | Framer Motion | Production-ready motion library for React. |
 
-## 💻 Tech Stack
+---
 
-- **Frontend**: React, Vite, Tailwind CSS, Framer Motion
-- **Core Technology**: WebRTC (RTCPeerConnection, RTCDataChannel)
-- **Backend/Signaling (External Module)**: Spring Boot, WebSockets, Java
-- **Languages**: JavaScript, HTML, CSS, Java
+## 🧠 Application Flow
+
+The ConnectX Web app communicates seamlessly with the Android Client and Backend Infrastructure:
+
+1. **Create Session**: User clicks "Start Sharing" to generate a unique receiving QR code.
+2. **Scan on Android**: The companion Android app scans the QR code containing the `SessionId`.
+3. **WebSocket Handshake**: The Web App and Android App connect via the Spring Boot Signaling service.
+4. **WebRTC Negotiation**: The devices exchange `OFFER`, `ANSWER`, and `ICE_CANDIDATES`.
+5. **P2P Transfer**: A direct DataChannel opens, and binary file chunks stream directly between devices.
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run the Web project locally.
+
+<details>
+<summary><strong> Running the Project</strong></summary>
+
+1.  **Clone the Repository**:
+    ```bash
+    git clone https://github.com/Mahir-Agarwal/ConnectX-Web-Client.git
+    cd ConnectX-Web-Client
+    ```
+
+2.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+
+3.  **Configure Environment**:
+    Create a `.env` file pointing to your backend signaling server.
+    ```env
+    VITE_API_BASE_URL=http://192.168.x.x:8080/api
+    VITE_MOBILE_URL=http://192.168.x.x:5173
+    ```
+
+4.  **Start Development Server**:
+    ```bash
+    npm run dev
+    ```
+</details>
+
+---
 
 ## 📂 Project Structure
 
-```text
+```bash
 ConnectX-WebApp/
-├── public/                # Static assets
-├── Demo/                  # Demo media files
-├── src/                   # Main source code
-│   ├── api/               # API integration (Session Management)
-│   ├── components/        # Reusable React UI components
-│   ├── context/           # React Context (Session State)
-│   ├── services/          # Core logic (Signaling & WebRTC)
-│   ├── App.jsx            # Application Entry Point
-│   └── main.jsx           # React DOM Mount
-├── .env                   # Environment config variables
-├── tailwind.config.js     # Tailwind CSS Configuration
-└── vite.config.js         # Vite Bundler Configuration
+├── Demo/                    # Application Demo GIFs
+├── src/
+│   ├── api/                 # API integration (Session Management)
+│   ├── components/          # Reusable React UI components
+│   ├── context/             # React Context (Session State)
+│   ├── services/            # Core logic (Signaling & WebRTC)
+│   ├── App.jsx              # Application Entry Point
+│   └── main.jsx             # React DOM Mount
+└── package.json             # Project dependencies
 ```
-
-## 🛠️ Installation & Setup
-
-Follow these steps to run the ConnectX Web Client locally on your machine:
-
-**1. Clone the repository**
-```bash
-git clone https://github.com/Mahir-Agarwal/ConnectX-Web-Client.git
-cd ConnectX-Web-Client
-```
-
-**2. Install dependencies**
-```bash
-npm install
-```
-
-**3. Configure Environment Variables**
-Create a `.env` file in the root directory (or edit the existing one) to specify your signaling server IP and ports:
-```env
-VITE_API_BASE_URL=http://YOUR_LOCAL_IP:8080/api
-VITE_MOBILE_URL=http://YOUR_LOCAL_IP:5173
-```
-
-**4. Start the Development Server**
-```bash
-npm run dev
-```
-*The app will be available at `http://localhost:5173` (or your local network IP).*
-
-## 🔄 How It Works
-
-1. **Create Session**: The sender generates a unique Session ID and QR Code via the frontend.
-2. **Join Session**: The receiver scans the QR code or enters the session link.
-3. **Signaling Handshake**: Devices connect via WebSockets to the Spring Boot server to exchange SDP descriptions.
-4. **ICE Negotiation**: Devices exchange network routing information to establish a P2P path.
-5. **Data Transfer**: `RTCDataChannel` opens, and file chunks stream directly from the sender to the receiver safely and quickly.
-
-## 🚀 Future Improvements
-
-- [ ] **Drag and Drop Support**: Seamlessly drop files directly onto the UI.
-- [ ] **Multiple File Transfer**: Queue and send entire directories at once.
-- [ ] **Progress Indicators**: Granular transfer speed and ETA readouts.
-- [ ] **End-to-End Encryption enhancements**: Add an extra layer of AES client-side encryption.
-
-## 👨‍💻 Author
-
-Built with passion by **Mahir Aggarwal**
-
-## 📄 License
-
-This project is licensed under the **MIT License**. See the LICENSE file for more details.
 
 ---
+
 <div align="center">
-  <i>If you like this project, consider giving it a ⭐!</i>
+  <p>
+    <sub> Engineered and Developed by <a href="https://github.com/Mahir-Agarwal">Mahir Agarwal</a></sub>
+  </p>
 </div>
